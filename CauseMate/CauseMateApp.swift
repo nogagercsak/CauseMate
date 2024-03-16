@@ -15,7 +15,7 @@ struct CauseMateApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(showSignInView: .constant(false))
+            RootView()
         }
     }
 }
