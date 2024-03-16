@@ -39,6 +39,11 @@
 		D21DC1F92BA6260D00527EB7 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D21DC1F82BA6260D00527EB7 /* FirebaseRemoteConfigSwift */; };
 		D21DC1FB2BA6260D00527EB7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D21DC1FA2BA6260D00527EB7 /* FirebaseStorage */; };
 		D21DC1FD2BA6260D00527EB7 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D21DC1FC2BA6260D00527EB7 /* FirebaseStorageCombine-Community */; };
+		D21DC1FF2BA629F600527EB7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC1FE2BA629F600527EB7 /* UserManager.swift */; };
+		D21DC2012BA62A1C00527EB7 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2002BA62A1C00527EB7 /* AuthManager.swift */; };
+		D21DC2032BA62A5A00527EB7 /* SignInEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2022BA62A5A00527EB7 /* SignInEmailViewModel.swift */; };
+		D21DC2052BA62A8500527EB7 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2042BA62A8500527EB7 /* SignInEmailView.swift */; };
+		D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2062BA62AAD00527EB7 /* AuthenticationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		D21DC1BA2BA6244100527EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D21DC1BD2BA6244100527EB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D21DC1C42BA6248200527EB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D21DC1FE2BA629F600527EB7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D21DC2002BA62A1C00527EB7 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		D21DC2022BA62A5A00527EB7 /* SignInEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewModel.swift; sourceTree = "<group>"; };
+		D21DC2042BA62A8500527EB7 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		D21DC2062BA62AAD00527EB7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +118,13 @@
 		D21DC1B52BA6243B00527EB7 /* CauseMate */ = {
 			isa = PBXGroup;
 			children = (
+				D21DC1FE2BA629F600527EB7 /* UserManager.swift */,
 				D21DC1B62BA6243B00527EB7 /* CauseMateApp.swift */,
 				D21DC1B82BA6243C00527EB7 /* ContentView.swift */,
+				D21DC2042BA62A8500527EB7 /* SignInEmailView.swift */,
+				D21DC2062BA62AAD00527EB7 /* AuthenticationView.swift */,
+				D21DC2002BA62A1C00527EB7 /* AuthManager.swift */,
+				D21DC2022BA62A5A00527EB7 /* SignInEmailViewModel.swift */,
 				D21DC1C42BA6248200527EB7 /* GoogleService-Info.plist */,
 				D21DC1BA2BA6244100527EB7 /* Assets.xcassets */,
 				D21DC1BC2BA6244100527EB7 /* Preview Content */,
@@ -235,8 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21DC1FF2BA629F600527EB7 /* UserManager.swift in Sources */,
+				D21DC2052BA62A8500527EB7 /* SignInEmailView.swift in Sources */,
+				D21DC2012BA62A1C00527EB7 /* AuthManager.swift in Sources */,
+				D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */,
 				D21DC1B92BA6243C00527EB7 /* ContentView.swift in Sources */,
 				D21DC1B72BA6243B00527EB7 /* CauseMateApp.swift in Sources */,
+				D21DC2032BA62A5A00527EB7 /* SignInEmailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
