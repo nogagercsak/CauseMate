@@ -12,15 +12,14 @@ struct NavBar: View {
     @Binding var showSignInView: Bool
 
     var body: some View {
-        HStack(spacing: 20) {
-            
+        HStack {
             
             NavigationLink(destination: ProfileView(showSignInView: $showSignInView)
                             .navigationBarBackButtonHidden(true)) {
                 Image(systemName: "person.crop.circle")
                     .font(.title)
             }
-            .padding(.leading, 20)
+            .padding(.leading, 90)
             
             Spacer()
             
@@ -31,7 +30,7 @@ struct NavBar: View {
                 Image(systemName: "gearshape")
                     .font(.title)
             }
-            .padding(.trailing, 20)
+            .padding(.trailing, 90)
         }
         .foregroundColor(.primary)
         .padding(.top, 20)

@@ -45,7 +45,7 @@ struct ProfileView: View {
             
             Spacer()
             
-//            NavBar(showSignInView: $showSignInView)
+            NavBar(showSignInView: $showSignInView)
         }
     }
 }
