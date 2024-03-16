@@ -6,26 +6,42 @@
 //
 
 import Foundation
+
 @MainActor
-final class SignInEmailViewModel: ObservableObject{
+final class SignInEmailViewModel: ObservableObject {
     
     @Published var email = ""
     @Published var password = ""
     
-    func signUp() async throws{
-        guard !email.isEmpty, !password.isEmpty else{
+    func signUp() async throws {
+        guard !email.isEmpty, !password.isEmpty else {
             print("No email or password found.")
             return
         }
         
         let authDataResult = try await AuthenticationManager.shared.createUser(email: email, password: password)
-        let user = DBUser(userId: authDataResult.uid, email: authDataResult.email, dateCreated: Date())
-        try await UserManager.shared.createNewUser(user: user)
+        
+        let newUser = DBUser(
+            userId: authDataResult.uid,
+            email: email,
+            dateCreated: Date(),
+            name: "",  // You'll need to get the name from the user input
+            dob: Date(),  // You'll need to get the date of birth from the user input
+            zipCode: "",  // You'll need to get the zip code from the user input
+            openToRemote: false,  // You'll need to get this preference from the user input
+            interests: []  // You'll need to get the interests from the user input
+        )
+        
+        do {
+            try await UserManager.shared.createNewUser(user: newUser)
+            print("User signed up successfully.")
+        } catch {
+            print("Error signing up user: \(error.localizedDescription)")
+        }
     }
     
-    
-    func signIn() async throws{
-        guard !email.isEmpty, !password.isEmpty else{
+    func signIn() async throws {
+        guard !email.isEmpty, !password.isEmpty else {
             print("No email or password found.")
             return
         }
@@ -33,6 +49,3 @@ final class SignInEmailViewModel: ObservableObject{
         try await AuthenticationManager.shared.signInUser(email: email, password: password)
     }
 }
-
-
-

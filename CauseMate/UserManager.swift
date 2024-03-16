@@ -9,94 +9,69 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-
-struct Vegetable: Codable {
-    let id: String
-    let title: String
-    let recentlyBought: Bool
-}
 struct DBUser: Codable {
     let userId: String
     let email: String?
     let dateCreated: Date?
-    
-    init(auth: AuthDataResultModel) {
-        self.userId = auth.uid
-        self.email = auth.email
-        self.dateCreated = Date()
-    }
-    
+    let name: String
+    let dob: Date
+    let zipCode: String
+    let openToRemote: Bool
+    let interests: [String]
+
     init(
         userId: String,
-        email: String? = nil,
-        dateCreated: Date? = nil
+        email: String,
+        dateCreated: Date,
+        name: String,
+        dob: Date,
+        zipCode: String,
+        openToRemote: Bool,
+        interests: [String]
     ) {
         self.userId = userId
         self.email = email
         self.dateCreated = dateCreated
+        self.name = name
+        self.dob = dob
+        self.zipCode = zipCode
+        self.openToRemote = openToRemote
+        self.interests = interests
     }
+
     enum CodingKeys: String, CodingKey {
-        case email = "email"
         case userId = "user_id"
+        case email = "email"
         case dateCreated = "date_created"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.userId = try container.decode(String.self, forKey: .userId)
-        self.email = try container.decodeIfPresent(String.self, forKey: .email)
-        self.dateCreated = try container.decodeIfPresent(Date.self, forKey: .dateCreated)
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.userId, forKey: .userId)
-        try container.encodeIfPresent(self.email, forKey: .email)
-        try container.encodeIfPresent(self.dateCreated, forKey: .dateCreated)
+        case name
+        case dob
+        case zipCode = "zip_code"
+        case openToRemote = "open_to_remote"
+        case interests
     }
 }
-final class UserManager{
-    
+
+final class UserManager {
     static let shared = UserManager()
-    private init() { }
-    
+    private init() {}
+
     private let userCollection = Firestore.firestore().collection("users")
-    
-    private func userDocument(userId:String) -> DocumentReference {
+
+    private func userDocument(userId: String) -> DocumentReference {
         userCollection.document(userId)
     }
-    
-    private let encoder: Firestore.Encoder = {
-        let encoder = Firestore.Encoder()
-        //encoder.keyEncodingStrategy = .convertToSnakeCase
-        return encoder
-    }()
-    
-    private let decoder: Firestore.Decoder = {
-        let decoder = Firestore.Decoder()
-        //Decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return decoder
-    }()
-    
-    func createNewUser(user:DBUser) async throws {
+
+    func createNewUser(user: DBUser) async throws {
         try userDocument(userId: user.userId).setData(from: user, merge: false)
     }
-    
-    //func createNewUser(auth: AuthDataResultModel) async throws{
-    //var userData: [String:Any] = [
-        //"user_id" : auth.uid,
-  //          "date_created" : Timestamp(),
-   //     ]
-    //    if let email = auth.email{
-     //       userData["email"] = email
-      //  }
-//        if let photoUrl = auth.photoUrl{
- //           userData["photo_url"] = photoUrl
-  //      }
-   //     try await userDocument(userId: auth.uid).setData(userData, merge: false)
-  //  }
+
+    func getCurrentUserID() -> String {
+        // Implement a method to get the current user ID, such as from Firebase Auth
+        // Return the user ID as a string
+        return "123456789" // Placeholder, replace with actual implementation
+    }
     
     func getUser(userId: String) async throws -> DBUser {
-        try await userDocument(userId: userId).getDocument(as: DBUser.self)
-    }
+           try await userDocument(userId: userId).getDocument(as: DBUser.self)
+       }
 }

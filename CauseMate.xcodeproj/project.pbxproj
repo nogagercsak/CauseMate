@@ -48,6 +48,7 @@
 		D287B2D32BA63B5A00D5BDC0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */; };
 		D287B2D52BA63B7300D5BDC0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */; };
 		D287B2D72BA643FE00D5BDC0 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D62BA643FE00D5BDC0 /* NavBar.swift */; };
+		D287B2D92BA6484300D5BDC0 /* UserInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D82BA6484300D5BDC0 /* UserInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D287B2D62BA643FE00D5BDC0 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		D287B2D82BA6484300D5BDC0 /* UserInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				D21DC1B82BA6243C00527EB7 /* RootView.swift */,
 				D287B2CF2BA63A9700D5BDC0 /* ProfileView.swift */,
 				D287B2D62BA643FE00D5BDC0 /* NavBar.swift */,
+				D287B2D82BA6484300D5BDC0 /* UserInputView.swift */,
 			);
 			name = UserViews;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				D287B2D02BA63A9700D5BDC0 /* ProfileView.swift in Sources */,
 				D21DC2052BA62A8500527EB7 /* SignInEmailView.swift in Sources */,
 				D287B2D32BA63B5A00D5BDC0 /* SettingsView.swift in Sources */,
+				D287B2D92BA6484300D5BDC0 /* UserInputView.swift in Sources */,
 				D21DC2012BA62A1C00527EB7 /* AuthManager.swift in Sources */,
 				D287B2D52BA63B7300D5BDC0 /* SettingsViewModel.swift in Sources */,
 				D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */,
