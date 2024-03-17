@@ -72,7 +72,7 @@ struct UserInputView: View {
         }
 
         let newUser = DBUser(
-            userId: UserManager.shared.getCurrentUserID(), // Assuming you have a method to get current user ID
+            userId: UserManager.shared.getCurrentUserID()!,
             email: "", // Email is not collected in this view
             dateCreated: Date(), // You can use the current date here
             name: name,

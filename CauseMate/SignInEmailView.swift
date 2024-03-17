@@ -23,26 +23,40 @@ struct SignInEmailView: View {
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
             
+            TextField("Name", text: $viewModel.name)
+                .padding()
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+            
+            DatePicker("Date of Birth", selection: $viewModel.dateOfBirth, displayedComponents: .date)
+                .padding()
+            
+            TextField("Zip Code", text: $viewModel.zipCode)
+                .padding()
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+            
+            Toggle("Interested in Remote", isOn: $viewModel.interestedInRemote)
+                .padding()
+            
+            // Here, you would have a list of interests to choose from
+            // For demonstration, assuming a simple text field
+            TextField("Interests (comma-separated)", text: $viewModel.interests)
+                .padding()
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(10)
+            
             Button{
-                Task{
-                    do{
+                Task {
+                    do {
                         try await viewModel.signUp()
                         showSignInView =  false
-                        return
-                    } catch {
-                        print(error)
-                    }
-                    
-                    do{
-                        try await viewModel.signIn()
-                        showSignInView =  false
-                        return
                     } catch {
                         print(error)
                     }
                 }
             } label: {
-                Text("Sign In")
+                Text("Sign Up")
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(height: 55)
@@ -53,9 +67,11 @@ struct SignInEmailView: View {
             Spacer()
         }
         .padding()
-        .navigationTitle("Sign In With Email")
+        .navigationTitle("Sign Up With Email")
     }
 }
+
+
 struct SignInWithEmail: PreviewProvider{
     static var previews: some View{
         NavigationStack{

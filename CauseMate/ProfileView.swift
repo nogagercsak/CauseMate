@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+
 @MainActor
 final class ProfileViewModel: ObservableObject{
     
@@ -18,14 +19,12 @@ final class ProfileViewModel: ObservableObject{
     }
 
     
-    
 }
-import SwiftUI
+
 struct ProfileView: View {
     
     @StateObject private var viewModel = ProfileViewModel()
     @Binding var showSignInView: Bool
-    
     
     var body: some View {
         VStack{
@@ -49,6 +48,7 @@ struct ProfileView: View {
         }
     }
 }
+
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
