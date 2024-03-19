@@ -44,6 +44,8 @@
 		D21DC2032BA62A5A00527EB7 /* SignInEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2022BA62A5A00527EB7 /* SignInEmailViewModel.swift */; };
 		D21DC2052BA62A8500527EB7 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2042BA62A8500527EB7 /* SignInEmailView.swift */; };
 		D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21DC2062BA62AAD00527EB7 /* AuthenticationView.swift */; };
+		D230CAB62BA91AE700538ACB /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D230CAB52BA91AE700538ACB /* SwipeView.swift */; };
+		D230CAB82BA91B0600538ACB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D230CAB72BA91B0600538ACB /* CardView.swift */; };
 		D287B2D02BA63A9700D5BDC0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2CF2BA63A9700D5BDC0 /* ProfileView.swift */; };
 		D287B2D32BA63B5A00D5BDC0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */; };
 		D287B2D52BA63B7300D5BDC0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */; };
@@ -64,6 +66,8 @@
 		D21DC2022BA62A5A00527EB7 /* SignInEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailViewModel.swift; sourceTree = "<group>"; };
 		D21DC2042BA62A8500527EB7 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
 		D21DC2062BA62AAD00527EB7 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		D230CAB52BA91AE700538ACB /* SwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		D230CAB72BA91B0600538ACB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D287B2CF2BA63A9700D5BDC0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				D21DC1B62BA6243B00527EB7 /* CauseMateApp.swift */,
+				D230CAB42BA91A9100538ACB /* Swipe */,
 				D287B2CB2BA638D900D5BDC0 /* Firestore */,
 				D287B2CC2BA638EA00D5BDC0 /* UserViews */,
 				D287B2CE2BA6393900D5BDC0 /* SignIn */,
@@ -157,6 +162,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D230CAB42BA91A9100538ACB /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				D230CAB52BA91AE700538ACB /* SwipeView.swift */,
+				D230CAB72BA91B0600538ACB /* CardView.swift */,
+			);
+			name = Swipe;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D287B2CB2BA638D900D5BDC0 /* Firestore */ = {
@@ -309,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D230CAB82BA91B0600538ACB /* CardView.swift in Sources */,
 				D21DC1FF2BA629F600527EB7 /* UserManager.swift in Sources */,
 				D287B2D02BA63A9700D5BDC0 /* ProfileView.swift in Sources */,
 				D21DC2052BA62A8500527EB7 /* SignInEmailView.swift in Sources */,
@@ -318,6 +334,7 @@
 				D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */,
 				F2604AD22BA9114C00DBE59E /* Data.swift in Sources */,
 				D287B2D72BA643FE00D5BDC0 /* NavBar.swift in Sources */,
+				D230CAB62BA91AE700538ACB /* SwipeView.swift in Sources */,
 				D21DC1B92BA6243C00527EB7 /* RootView.swift in Sources */,
 				D21DC1B72BA6243B00527EB7 /* CauseMateApp.swift in Sources */,
 				D21DC2032BA62A5A00527EB7 /* SignInEmailViewModel.swift in Sources */,

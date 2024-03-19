@@ -13,16 +13,12 @@ struct NavBar: View {
 
     var body: some View {
         HStack {
-            
             NavigationLink(destination: ProfileView(showSignInView: $showSignInView)
                             .navigationBarBackButtonHidden(true)) {
                 Image(systemName: "person.crop.circle")
                     .font(.title)
+                    .padding(.leading, 80)
             }
-            .padding(.leading, 90)
-            
-            Spacer()
-            
             Spacer()
             
             NavigationLink(destination: SettingsView(showSignInView: $showSignInView)
@@ -30,16 +26,24 @@ struct NavBar: View {
                 Image(systemName: "gearshape")
                     .font(.title)
             }
-            .padding(.trailing, 90)
+            
+            Spacer()
+            
+            NavigationLink(destination: SwipeView(showSignInView: $showSignInView)
+                            .navigationBarBackButtonHidden(true)) {
+                Image(systemName: "menucard")
+                    .font(.title)
+                    .padding(.trailing, 80)
+            }
         }
         .foregroundColor(.primary)
         .padding(.top, 20)
+        .frame(maxWidth: .infinity)
         .frame(height: 60)
         .background(Color.white)
         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
     }
 }
-
 
 struct NavBar_Previews: PreviewProvider {
     static var previews: some View {

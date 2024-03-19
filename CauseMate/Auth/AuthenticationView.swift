@@ -12,51 +12,29 @@ struct AuthenticationView: View {
     
     var body: some View {
         VStack{
-            Text("Welcome to CauseMate")
-                .font(Font.custom("SeH-CB", size: 40))
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color(red: 0.34, green: 0.41, blue: 0.34))
-                .offset(x: 0, y: -55)
+            Text("Welcome to CauseMate!")
+                .font(.system(size: 50))
+                .frame(alignment: .leading)
+            Image("globe")
+                .resizable()
+                .scaledToFit()
+                .padding()
             
             
             NavigationLink {
                 SignInEmailView(showSignInView: $showSignInView)
             } label: {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 233, height: 54)
-                        .background(Color(red: 0.43, green: 0.51, blue: 0.42))
-                        .cornerRadius(30)
-                    Text("Sign Up with Email")
-                        .font(Font.custom("Radio Canada", size: 22))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.98, green: 0.93, blue: 0.66))
-                        .frame(width: 233, height: 54, alignment: .center)
-                } //ZStack line 19.
+                Text("Sign Up")
+                    .padding()
+                    .font(.system(size: 30))
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding([.horizontal, .bottom])
+                }
             }
-            ZStack {
-                Rectangle()
-                    .foregroundColor(.clear)
-                    .frame(width: 233, height: 54)
-                    .background(Color(red: 1, green: 0.96, blue: 0.89))
-                    .cornerRadius(30)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .inset(by: 1)
-                            .stroke(Color(red: 0.43, green: 0.51, blue: 0.42), lineWidth: 2)
-                    )
-                Text("Log In")
-                    .font(Font.custom("Radio Canada", size: 25))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 0.43, green: 0.51, blue: 0.42))
-                    .frame(width: 100, height: 35, alignment: .center)
-            } //ZStack line 32.
         }
-        .frame(width: 393, height: 852)
-        .background(Color(red: 1, green: 0.96, blue: 0.89))
-        .padding()
-    }
 }
 struct AuthenticationView_Previews: PreviewProvider{
     static var previews: some View{

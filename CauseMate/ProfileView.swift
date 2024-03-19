@@ -17,8 +17,6 @@ final class ProfileViewModel: ObservableObject{
         let authDataResult = try AuthenticationManager.shared.getAuthenticatedUser()
         self.user = try await UserManager.shared.getUser(userId: authDataResult.uid)
     }
-
-    
 }
 
 struct ProfileView: View {
@@ -34,6 +32,10 @@ struct ProfileView: View {
                     
                     if let email = user.email{
                         Text("Email: \(email.description)")
+                    }
+                    
+                    if let name = user.name{
+                        Text("Welcome \(name.description)")
                     }
                 }
             }

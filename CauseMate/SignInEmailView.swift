@@ -13,12 +13,12 @@ struct SignInEmailView: View {
     
     var body: some View {
         VStack{
-            TextField("Email...", text: $viewModel.email)
+            TextField("Email", text: $viewModel.email)
                 .padding()
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
             
-            SecureField("Password...", text: $viewModel.password)
+            SecureField("Password", text: $viewModel.password)
                 .padding()
                 .background(Color.gray.opacity(0.3))
                 .cornerRadius(10)
@@ -39,8 +39,7 @@ struct SignInEmailView: View {
             Toggle("Interested in Remote", isOn: $viewModel.interestedInRemote)
                 .padding()
             
-            // Here, you would have a list of interests to choose from
-            // For demonstration, assuming a simple text field
+           
             TextField("Interests (comma-separated)", text: $viewModel.interests)
                 .padding()
                 .background(Color.gray.opacity(0.3))
