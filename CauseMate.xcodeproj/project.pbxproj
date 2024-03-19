@@ -48,6 +48,8 @@
 		D287B2D32BA63B5A00D5BDC0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */; };
 		D287B2D52BA63B7300D5BDC0 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */; };
 		D287B2D72BA643FE00D5BDC0 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D287B2D62BA643FE00D5BDC0 /* NavBar.swift */; };
+		F2604AD22BA9114C00DBE59E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2604AD12BA9114C00DBE59E /* Data.swift */; };
+		F2604AD52BA911F800DBE59E /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = F2604AD42BA911F800DBE59E /* CSV */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,7 @@
 		D287B2D22BA63B5A00D5BDC0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D287B2D42BA63B7300D5BDC0 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		D287B2D62BA643FE00D5BDC0 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		F2604AD12BA9114C00DBE59E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,7 @@
 				D21DC1DF2BA6260C00527EB7 /* FirebaseDynamicLinks in Frameworks */,
 				D21DC1E32BA6260D00527EB7 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				D21DC1EF2BA6260D00527EB7 /* FirebaseInstallations in Frameworks */,
+				F2604AD52BA911F800DBE59E /* CSV in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,7 @@
 				D21DC1C42BA6248200527EB7 /* GoogleService-Info.plist */,
 				D21DC1BA2BA6244100527EB7 /* Assets.xcassets */,
 				D21DC1BC2BA6244100527EB7 /* Preview Content */,
+				F2604AD12BA9114C00DBE59E /* Data.swift */,
 			);
 			path = CauseMate;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				D21DC1F82BA6260D00527EB7 /* FirebaseRemoteConfigSwift */,
 				D21DC1FA2BA6260D00527EB7 /* FirebaseStorage */,
 				D21DC1FC2BA6260D00527EB7 /* FirebaseStorageCombine-Community */,
+				F2604AD42BA911F800DBE59E /* CSV */,
 			);
 			productName = CauseMate;
 			productReference = D21DC1B32BA6243B00527EB7 /* CauseMate.app */;
@@ -274,6 +280,7 @@
 			mainGroup = D21DC1AA2BA6243B00527EB7;
 			packageReferences = (
 				D21DC1C62BA625E300527EB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F2604AD32BA911F800DBE59E /* XCRemoteSwiftPackageReference "CSV" */,
 			);
 			productRefGroup = D21DC1B42BA6243B00527EB7 /* Products */;
 			projectDirPath = "";
@@ -309,6 +316,7 @@
 				D21DC2012BA62A1C00527EB7 /* AuthManager.swift in Sources */,
 				D287B2D52BA63B7300D5BDC0 /* SettingsViewModel.swift in Sources */,
 				D21DC2072BA62AAE00527EB7 /* AuthenticationView.swift in Sources */,
+				F2604AD22BA9114C00DBE59E /* Data.swift in Sources */,
 				D287B2D72BA643FE00D5BDC0 /* NavBar.swift in Sources */,
 				D21DC1B92BA6243C00527EB7 /* RootView.swift in Sources */,
 				D21DC1B72BA6243B00527EB7 /* CauseMateApp.swift in Sources */,
@@ -526,6 +534,14 @@
 				minimumVersion = 10.22.1;
 			};
 		};
+		F2604AD32BA911F800DBE59E /* XCRemoteSwiftPackageReference "CSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -663,6 +679,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D21DC1C62BA625E300527EB7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		F2604AD42BA911F800DBE59E /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2604AD32BA911F800DBE59E /* XCRemoteSwiftPackageReference "CSV" */;
+			productName = CSV;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
